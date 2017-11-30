@@ -26,7 +26,12 @@
 </ol>
 
 
-<h4>Modification</h4>
+<h3>Modification</h3>
+
+<h4 *ngIf="!personne.nom">Attention nom non definie</h4>
+<h4 *ngIf="!personne.prenom">Attention nom non definie</h4>
+<h4 *ngIf="!personne.description">Attention nom non definie</h4>
+<h4 *ngIf="!personne.travail">Attention nom non definie</h4>
 
 <ul>
 <!-- modifie que sur la page -->
@@ -37,4 +42,3 @@
 
 </ul>
 
-<input type="checkbox" [(ngModel)]="salut" />
