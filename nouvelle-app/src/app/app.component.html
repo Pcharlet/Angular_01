@@ -5,6 +5,10 @@
   </h1>
 </div>
 <h2>Details sur les scientifiques : </h2>
+
+<ol>
+  <li *ngFor="let p of liste">{{p.nom}}{{p.prenom}}</li>
+</ol>
 <ul>
   <li><strong>Nom :</strong> {{ personne.nom }}</li>
   <li>Prenom : {{ personne.prenom }}</li>
