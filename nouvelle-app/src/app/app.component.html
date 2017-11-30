@@ -1,20 +1,29 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<div>
   <h1>
-    {{ personne.title }} !
+    {{ personne.title }}
   </h1>
 </div>
-<h2>Details sur les scientifiques : </h2>
+<ol>
+  <li *ngFor="let p of liste" (click)="clickOn(p)">{{p.nom}}{{p.prenom}}</li>
+</ol>
+
+
+<h2 style="text-align: center">Detail sur {{personne.nom }} {{personne.prenom}} </h2>
+
+
+<h3>Identité : </h3>
 
 <ol>
-  <li *ngFor="let p of liste">{{p.nom}}{{p.prenom}}</li>
+  <li><strong>Nom : </strong>{{personne.nom}}</li>
+  <li><strong>Prenom : </strong>{{personne.prenom}}</li>
 </ol>
-<ul>
-  <li><strong>Nom :</strong> {{ personne.nom }}</li>
-  <li>Prenom : {{ personne.prenom }}</li>
-  <li>Description : {{ personne.description }}</li>
-  <li>Travail : {{ personne.travail }}</li>
-</ul>
+
+<h3>Découvertes :</h3>
+<ol>
+  <li><strong>Découverte : </strong>{{personne.travail}}</li>
+  <li><strong>Description : </strong>{{personne.description}}</li>
+</ol>
 
 
 <h4>Modification</h4>
