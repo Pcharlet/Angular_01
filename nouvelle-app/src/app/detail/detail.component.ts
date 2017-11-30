@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'detail',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailComponent implements OnInit {
 
-  constructor() { }
+  alea = Math.random();
 
-  ngOnInit() {
-  }
+  @Input() nomPersonne;
+
+
+  constructor() {}
+  ngOnInit() {}
 
 }
