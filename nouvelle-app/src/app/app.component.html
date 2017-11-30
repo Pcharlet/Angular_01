@@ -4,8 +4,11 @@
     {{ personne.title }}
   </h1>
 </div>
+
+<detail></detail>
+
 <ol>
-  <li *ngFor="let p of liste" (click)="clickOn(p)">{{p.nom}}{{p.prenom}}</li>
+  <li [class.selected]="p==personne" (click)="clickPersonne(p)" *ngFor="let p of liste"> {{p.prenom}} {{p.nom }} </li>
 </ol>
 
 
@@ -29,9 +32,9 @@
 <h3>Modification</h3>
 
 <h4 *ngIf="!personne.nom">Attention nom non definie</h4>
-<h4 *ngIf="!personne.prenom">Attention nom non definie</h4>
-<h4 *ngIf="!personne.description">Attention nom non definie</h4>
-<h4 *ngIf="!personne.travail">Attention nom non definie</h4>
+<h4 *ngIf="!personne.prenom">Attention prenom non definie</h4>
+<h4 *ngIf="!personne.description">Attention description non definie</h4>
+<h4 *ngIf="!personne.travail">Attention decouverte non definie</h4>
 
 <ul>
 <!-- modifie que sur la page -->
